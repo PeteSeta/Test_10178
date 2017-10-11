@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Samy Kamkar">
+
+    <title>Crack Master Combo Locks in 8 Tries - samy kamkar</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document">
+    <div class="container theme-showcase" role="main">
+
+			<br>
+
+
+
+      <div class="row">
+        <div class="col-md-8" role="main">
+
+				<div class="panel panel-default">
+					  <div class="panel-body">
+
+				1. Set the dial to 0.<br>
+				2. Apply full pressure upward on the shackle as if trying to open it.<br>
+				3. Rotate dial to the left (towards 10) hard until the dial gets locked.<br>
+				4. Notice how the dial is locked into a small groove. If you're directly between two digits such as 3 and 4, release the shackle and turn the dial left further until you're into the next locked groove. However, if the dial is between two half digits (eg 2.5 and 3.5), then enter the digit in-between into <b>First Locked Position</b> (eg, 3).<br>
+				5. Do this again until you find the second digit below 11 that is between two half digits (eg 5.5 and 6.5), and enter the whole number in <b>Second Locked Position</b> (eg, 7).<br>
+				6. Apply half as much pressure to the shackle so that you can turn the dial.<br>
+				7. Rotate dial to the right until you feel resistance. Rotate the dial to the right several more times to ensure you're feeling resistance at the same exact location.<br>
+				8. Enter this number in <b>Resistant Location</b>. If the resistance begins at a half number, such as 14.5, enter 14.5.<br>
+				9. Click <b>Find Combos</b>!<br>
+				<br>
+
+				<div class="well well-sm">We now have 20 possible combos, but we'll reduce this further. Keep reading!</div>
+
+				10. Set the dial to the first possibility for the <b>Third Digit</b>.<br>
+				11. Apply full pressure upward on the shackle as if trying to open it.<br>
+				12. Turn the dial and note how much give there is.<br>
+				13. Loosen the shackle and set the dial to the second possibility for the <b>Third Digit</b>.<br>
+				14. Apply full pressure upward on the shackle as if trying to open it.<br>
+				15. If there is <b>more</b> give on the second digit, click the second digit. Otherwise, click the first digit.<br>
+				16. You are left with 8 possible combinations. Test them all until one works with the standard instructions below!<br>
+				<br>
+				<i>Standard instructions for combination lock:</i><br>
+				1. Turn right three times. Stop at <b>First Digit</b>.<br>
+				2. Turn left one full turn passing 1st number and stop at <b>Second Digit</b>.<br>
+				3. Turn right and stop at <b>Third Digit</b>. Pull shackle. Profit.<br>
+<br>
+
+
+									  </div>
+									</div>
+	</div>
+	<div class="col-md-4" role="complementary">
+			<form class="bs-example bs-example-form" data-example-id="simple-input-groups">
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">First Locked Position </span>
+				<input autofocus id=l1 type="text" class="form-control" placeholder="whole # under 11" aria-describedby="basic-addon1">
+			</div>
+
+			<div>&nbsp;</div>
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon2">Second Locked Position </span>
+				<input id=l2 type="text" class="form-control" placeholder="whole # under 11" aria-describedby="basic-addon1">
+			</div>
+
+			<div>&nbsp;</div>
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon3">Resistant Location</span>
+				<input id=rl type="text" class="form-control" placeholder="whole or half # (eg 4 or 4.5)" aria-describedby="basic-addon1">
+			</div>
+
+			<div>&nbsp;</div>
+			<div class="input-group">
+				<a href="#" class="btn btn-primary" role="button" onClick="combo(); return false;">Find Combos</a>
+      </div>
+
+
+			<div>&nbsp;<br><br><b>Your Combination:</b><br>&nbsp;</div>
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon3">First Digit</span>
+				<input id=d1 type="text" class="form-control" disabled placeholder="" aria-describedby="basic-addon1">
+			</div>
+
+			<div>&nbsp;</div>
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon3">Second Digit(s)</span>
+				<input id=d2 type="text" class="form-control" disabled placeholder="" aria-describedby="basic-addon1">
+			</div>
+
+			<div>&nbsp;</div>
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon3">Third Digit</span>
+				<input id=d3 type="text" class="form-control" disabled placeholder="" aria-describedby="basic-addon1">
+			</div>
+
+			<div>&nbsp;</div>
+			<div class="input-group">Third digit:
+				<a id=t1 href="#" class="btn btn-primary" role="button" onClick="combo(1); return false">?</a> or
+				<a id=t2 href="#" class="btn btn-primary" role="button" onClick="combo(2); return false">?</a>
+      </div>
+
+		</div>
+	</div>
+
+		</form>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+			<script>
+				for (var i = 0; i < 40; i++)
+					$('table > tbody').append('<tr><td id=td1_'+i+'>'+i+'</td><td id=td2_'+i+'>'+i+'</td><td id=td3_'+i+'>'+i+'</td></tr>');
+
+					function combo(x)
+					{
+						var second = [];
+						var third = [];
+						var l1 = parseInt($('input#l1').val());
+						var l2 = parseInt($('input#l2').val());
+
+						var first = (Math.ceil($('input#rl').val()) + 5) % 40;
+						$('input#d1').val(first);
+
+						var mod = first % 4;
+
+						for (var i = 0; i < 4; i++)
+						{
+							if (((10 * i) + l1) % 4 == mod)
+								third.push((10 * i) + l1);
+
+							if (((10 * i) + l2) % 4 == mod)
+								third.push((10 * i) + l2);
+						}
+						$('a#t1').text(third[0]);
+						$('a#t2').text(third[1]);
+						$('input#d3').val(x ? third[x-1] : third.join(', '));
+
+						for (var i = 0; i < 10; i++)
+						{
+							var tmp = ((mod + 2) % 4) + (4 * i);
+
+							if (!x || ( (third[x-1]+2)%40 != tmp && (third[x-1]-2)%40 != tmp))
+								second.push(tmp);
+						}
+						$('input#d2').val(second.join(', '));
+
+							console.log(first);
+							console.log(second);
+							console.log(third);
+					}
+
+			</script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-6127617-2']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+			 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			 ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+			 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			 })();
+</script>
+
+  </body>
+</html>
